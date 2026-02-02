@@ -13,10 +13,15 @@
 
 body {
   margin: 0;
-  padding: 32px 48px 48px;
+  padding: 0;
+  background: #f4f6fb;
+}
+
+.page-container {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+  padding: 32px 48px 48px;
 }
 
 .page-header {
@@ -352,7 +357,7 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  body {
+  .page-container {
     padding: 20px;
   }
 
