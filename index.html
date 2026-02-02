@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Student Productivity Hub</p>
+        <h1>Assignment Dashboard</h1>
+        <p class="subtitle">
+          Track assignments in order, set reminder checkboxes, and visualize study blocks with the
+          calendar planner.
+        </p>
+      </div>
+      <div class="date-card">
+        <p class="label">Today</p>
+        <p class="date">February 2, 2025</p>
+        <p class="time">4:30 PM</p>
+        <div class="date-meta">
+          <span>Next deadline: Feb 5</span>
+          <span>Focus streak: 4 days</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel" aria-labelledby="assignment-title">
+        <div class="panel-header">
+          <div>
+            <p class="label">Assignments</p>
+            <h2 id="assignment-title">Ordered by priority</h2>
+          </div>
+          <button class="cta">Add assignment</button>
+        </div>
+        <table class="assignment-table">
+          <thead>
+            <tr>
+              <th scope="col">Order</th>
+              <th scope="col">Assignment</th>
+              <th scope="col">Due date</th>
+              <th scope="col">Reminder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="order">1</td>
+              <td>
+                <div class="assignment-title">Research Methods Essay Draft</div>
+                <p class="assignment-note">Needs citations + outline revisions</p>
+              </td>
+              <td>
+                <div class="due-date">Feb 5</div>
+                <span class="tag urgent">Due in 3 days</span>
+              </td>
+              <td>
+                <label class="reminder">
+                  <input type="checkbox" checked />
+                  Remind me
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="order">2</td>
+              <td>
+                <div class="assignment-title">Calculus Problem Set 8</div>
+                <p class="assignment-note">20 problems remaining</p>
+              </td>
+              <td>
+                <div class="due-date">Feb 7</div>
+                <span class="tag warning">Due in 5 days</span>
+              </td>
+              <td>
+                <label class="reminder">
+                  <input type="checkbox" checked />
+                  Remind me
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="order">3</td>
+              <td>
+                <div class="assignment-title">Group Presentation Slides</div>
+                <p class="assignment-note">Final visuals + speaking notes</p>
+              </td>
+              <td>
+                <div class="due-date">Feb 10</div>
+                <span class="tag info">Due in 8 days</span>
+              </td>
+              <td>
+                <label class="reminder">
+                  <input type="checkbox" />
+                  Remind me
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="order">4</td>
+              <td>
+                <div class="assignment-title">Studio Critique Prep</div>
+                <p class="assignment-note">Compile sketches + reflections</p>
+              </td>
+              <td>
+                <div class="due-date">Feb 12</div>
+                <span class="tag info">Due in 10 days</span>
+              </td>
+              <td>
+                <label class="reminder">
+                  <input type="checkbox" />
+                  Remind me
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel reminders" aria-labelledby="reminders-title">
+        <div class="panel-header">
+          <div>
+            <p class="label">Upcoming reminders</p>
+            <h2 id="reminders-title">Deadlines to watch</h2>
+          </div>
+        </div>
+        <ul class="reminder-list">
+          <li>
+            <span class="day">Mon</span>
+            <div>
+              <h3>Essay Draft Check-in</h3>
+              <p>Reminder set for 9:00 AM · Alert 48 hours before</p>
+            </div>
+            <span class="pill">High</span>
+          </li>
+          <li>
+            <span class="day">Wed</span>
+            <div>
+              <h3>Problem Set Progress</h3>
+              <p>Reminder set for 6:00 PM · Alert 72 hours before</p>
+            </div>
+            <span class="pill">Medium</span>
+          </li>
+          <li>
+            <span class="day">Fri</span>
+            <div>
+              <h3>Presentation Dry Run</h3>
+              <p>Reminder set for 4:30 PM · Alert 96 hours before</p>
+            </div>
+            <span class="pill">Medium</span>
+          </li>
+        </ul>
+        <div class="toggle-row">
+          <label>
+            <input type="checkbox" checked />
+            Push phone notifications
+          </label>
+          <label>
+            <input type="checkbox" checked />
+            Email summaries
+          </label>
+        </div>
+      </section>
+
+      <section class="panel calendar" aria-labelledby="calendar-title">
+        <div class="panel-header">
+          <div>
+            <p class="label">Calendar tracking</p>
+            <h2 id="calendar-title">Best times to study or work</h2>
+          </div>
+          <div class="calendar-legend">
+            <span class="legend-item focus">Best focus</span>
+            <span class="legend-item work">Group work</span>
+            <span class="legend-item prep">Light prep</span>
+          </div>
+        </div>
+        <div class="calendar-grid">
+          <div class="calendar-day">
+            <h3>Monday</h3>
+            <ul>
+              <li class="focus">8:00 - 10:30 AM · Writing focus</li>
+              <li class="prep">1:00 - 2:00 PM · Lecture review</li>
+              <li class="work">6:00 - 7:30 PM · Group call</li>
+            </ul>
+          </div>
+          <div class="calendar-day">
+            <h3>Tuesday</h3>
+            <ul>
+              <li class="focus">9:00 - 11:00 AM · Problem set</li>
+              <li class="prep">2:30 - 3:30 PM · Reading sprint</li>
+              <li class="work">5:00 - 6:00 PM · Studio check-in</li>
+            </ul>
+          </div>
+          <div class="calendar-day">
+            <h3>Wednesday</h3>
+            <ul>
+              <li class="focus">7:30 - 9:30 AM · Draft revisions</li>
+              <li class="prep">12:00 - 1:00 PM · Flashcards</li>
+              <li class="work">4:00 - 5:30 PM · Presentation prep</li>
+            </ul>
+          </div>
+          <div class="calendar-day">
+            <h3>Thursday</h3>
+            <ul>
+              <li class="focus">8:30 - 10:00 AM · Calculus drills</li>
+              <li class="prep">1:30 - 2:30 PM · Research scan</li>
+              <li class="work">6:30 - 7:30 PM · Peer review</li>
+            </ul>
+          </div>
+          <div class="calendar-day">
+            <h3>Friday</h3>
+            <ul>
+              <li class="focus">9:00 - 11:30 AM · Slide polish</li>
+              <li class="prep">2:00 - 3:00 PM · Quiz practice</li>
+              <li class="work">5:00 - 6:30 PM · Team rehearsal</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
